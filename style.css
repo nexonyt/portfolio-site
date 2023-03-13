@@ -28,10 +28,17 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 0.3rem;
-    height: 10vh;
-    position: relative;
+    height: 12vh;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+    z-index: 10;
 }
 
+header.active {
+    box-shadow: var(--shadow);
+}
 
 .header-list {
     position: absolute;
@@ -102,7 +109,7 @@ header{
 
 .main {
     width: 100vw;
-    height: 90vh;
+    height: 70vh;
     display: flex;
     flex-direction: row-reverse;
 }
@@ -114,27 +121,28 @@ header{
     margin: auto;
     width: 80px;
     height: 80px;
+    z-index: 7;
 }
 
 /* SECTION 2 */
 
 .main2 {
     width: 100vw;
-    height: 70vh;
+    /* height: 80vh; */
     display: flex;
     align-items: center;
     flex-direction: row;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     padding: 1rem 3rem;
 }
 
 #header-main2 {
+    margin-top: 13rem;
     display: flex;
     justify-content: center;
     color: rgb(0, 0, 0);
     font-size: 2.3rem;
     font-weight: bold;
-    margin-top: 5rem;
 }
 #text-main2 {
     font-size: 1.2rem;
@@ -155,7 +163,7 @@ header{
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-color:white;
+    background-color:rgb(75, 75, 75);
     padding: 2rem;
 }
 
@@ -195,29 +203,48 @@ header{
 #cursor.active  {
     animation: blink 1s infinite;
 }
+
+
 /* FOOTER */
 
 #stopka {
     width: 100vw;
-    height: 50vh;
+    height: 30vh;
     background-color: #252525;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+#stopka #footer-text-copyright a  {
+    text-decoration: none;
+    color: white;
+}
+#stopka #footer-text-p2 a  {
+    text-decoration: none;
+    color: rgb(173, 173, 173);
+
+}
+#footer-text-p1, #footer-text-p2 {
+    color: rgb(173, 173, 173);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#footer-text-copyright {
+    font-size: 1rem;
     color: white;
     letter-spacing: .125rem;
     text-transform: uppercase;
     transition: letter-spacing 0.5s;
+    text-align: center;
 }
-#stopka:hover {
+#footer-text-copyright:hover {
     transition: letter-spacing 0.5s;
     letter-spacing: .225rem;
 }
-#stopka a {
-    text-decoration: none;
-    color: white;
-}
-
 
 
 /* DEKSTOP VERSION  */
@@ -230,6 +257,7 @@ header{
         background-color: white;
         z-index: 9999;
         transition: 0.3s ease-in-out;
+        header: 10vh;
     }
     header.active {
         box-shadow: var(--shadow);
@@ -271,6 +299,9 @@ header{
     .header-list .list-li:hover::after {
         width: 100%;
     }
+    .main2 {
+        height: 70vh;
+    }
 }
 
 /* MEDIA QUERIES */ /* MEDIA QUERIES */ /* MEDIA QUERIES */ /* MEDIA QUERIES */
@@ -297,6 +328,14 @@ header{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    #header-main2 {
+        margin-top: 5rem;
+    }
+    .main2 {
+        height: 150vh;
+        padding: 1rem 0.2rem;
+        
     }
 }
 
