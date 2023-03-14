@@ -24,6 +24,11 @@ body {
 	background: #000000;
 } */
 
+ p::selection{
+    color: white;
+    background-color: rgb(48, 48, 48);
+} 
+
 header{ 
     display: flex;
     justify-content: space-between;
