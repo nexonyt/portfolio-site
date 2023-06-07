@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 * {
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 
-:root{
+:root {
     --shadow: rgba(0, 0, 0, 0.062) 0px 4px 5px;
 }
 
@@ -24,16 +24,17 @@ body {
 	background: #000000;
 } */
 
-p::selection,a::selection, i::selection{
+*::selection {
     color: white;
     background-color: rgb(48, 48, 48);
-} 
+}
 
-header{ 
+header {
     display: flex;
     justify-content: space-between;
     padding: 0.3rem;
-    height: 12vh;
+    /* height: 12vh; */
+    height: 90px;
     position: sticky;
     top: 0;
     background-color: white;
@@ -60,7 +61,7 @@ header.active {
     transform: translateX(-100%);
     left: 0;
     top: 0;
-     transition: 0.3s ease-in-out; 
+    transition: 0.3s ease-in-out;
 }
 
 .header-list.active {
@@ -90,20 +91,21 @@ header.active {
     z-index: 10;
 }
 
-.burger.active > span {
+.burger.active>span {
     background-color: white;
 }
 
-.burger.active > span:nth-child(1) {
+.burger.active>span:nth-child(1) {
     transform: rotate(-45deg) translateY(1rem);
     width: 80%;
 }
 
-.burger.active > span:nth-child(2) {
+.burger.active>span:nth-child(2) {
     transform: rotate(45deg) translateY(-0.7rem);
     width: 80%;
 }
-.burger.active > span:nth-child(3) {
+
+.burger.active>span:nth-child(3) {
     display: none;
 }
 
@@ -114,10 +116,11 @@ header.active {
 
 .main {
     width: 100vw;
-    height: 70vh;
+    height: 90vh;
     display: flex;
     flex-direction: row-reverse;
 }
+
 #gif {
     position: absolute;
     left: 0;
@@ -133,12 +136,12 @@ header.active {
 
 .main2 {
     width: 100vw;
-    /* height: 80vh; */
+    height: 80vh;
     display: flex;
     align-items: center;
     flex-direction: row;
     background-color: white;
-    padding: 1rem 3rem;
+    padding: 0.7em 2.1em;
 }
 
 #header-main2 {
@@ -149,11 +152,13 @@ header.active {
     font-size: 2.3rem;
     font-weight: bold;
 }
+
 #text-main2 {
     font-size: 1.2rem;
     padding: 1rem 2rem;
     text-align: justify;
     color: rgb(0, 0, 0);
+
 }
 
 #main-2-man {
@@ -168,7 +173,7 @@ header.active {
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-color:rgb(75, 75, 75);
+    background-color: rgb(75, 75, 75);
     padding: 2rem;
 }
 
@@ -178,6 +183,7 @@ header.active {
     display: flex;
     justify-content: center;
 }
+
 .main-right {
     width: 50vw;
     display: flex;
@@ -205,7 +211,7 @@ header.active {
     font-size: 1.5rem;
 }
 
-#cursor.active  {
+#cursor.active {
     animation: blink 1s infinite;
 }
 
@@ -223,16 +229,19 @@ header.active {
     padding: 1rem;
 }
 
-#stopka #footer-text-copyright a  {
+#stopka #footer-text-copyright a {
     text-decoration: none;
     color: white;
 }
-#stopka #footer-text-p2 a  {
+
+#stopka #footer-text-p2 a {
     text-decoration: none;
     color: rgb(173, 173, 173);
 
 }
-#footer-text-p1, #footer-text-p2 {
+
+#footer-text-p1,
+#footer-text-p2 {
     color: rgb(173, 173, 173);
     text-transform: uppercase;
     text-align: center;
@@ -246,6 +255,7 @@ header.active {
     transition: letter-spacing 0.5s;
     text-align: center;
 }
+
 #footer-text-copyright:hover {
     transition: letter-spacing 0.5s;
     letter-spacing: .225rem;
@@ -264,9 +274,11 @@ header.active {
         transition: 0.3s ease-in-out;
         header: 10vh;
     }
+
     header.active {
         box-shadow: var(--shadow);
     }
+
     .header-list {
         position: unset;
         background-color: transparent;
@@ -279,37 +291,46 @@ header.active {
         gap: 8rem;
         font-weight: normal;
         align-items: center;
-        padding-right: 3rem;   
+        padding-right: 3rem;
     }
+
     .header-list li {
         cursor: pointer;
     }
+
     .burger {
         display: none;
     }
+
     .header-list .list-li {
         position: relative;
     }
+
     .header-list .list-li::after {
         content: '';
         width: 0%;
         height: 0.2rem;
         background-color: black;
         position: absolute;
-        bottom: -0.2rem;
+        bottom: -0.5rem;
         left: 0;
         border-radius: 2rem;
         transition: all 0.2s ease-in-out;
     }
+
     .header-list .list-li:hover::after {
         width: 100%;
     }
+
     .main2 {
         height: 70vh;
     }
 }
 
-/* MEDIA QUERIES */ /* MEDIA QUERIES */ /* MEDIA QUERIES */ /* MEDIA QUERIES */
+/* MEDIA QUERIES */
+/* MEDIA QUERIES */
+/* MEDIA QUERIES */
+/* MEDIA QUERIES */
 
 @media only screen and (max-width: 1000px) {
     .main {
@@ -319,11 +340,13 @@ header.active {
         justify-content: center;
         align-items: center;
     }
-     .main-left {
+
+    .main-left {
         width: 100vw;
         display: flex;
         justify-content: center;
-    } 
+    }
+
     #main-right-picture {
         width: 60vw;
     }
@@ -334,24 +357,39 @@ header.active {
         justify-content: center;
         align-items: center;
     }
+
     #header-main2 {
         margin-top: 5rem;
     }
+
     .main2 {
         height: 150vh;
         padding: 1rem 0.2rem;
-        
+
     }
 }
 
-@media only screen and (min-width: 750px)  {
+@media only screen and (min-width: 750px) {
     #main-right-picture {
         width: 75vw;
     }
 }
 
+@media only screen and (max-width: 750px) {
+    #main-right-picture {
+        width: 75vw;
+    }
 
-@media only screen and (max-width: 1200px)  {
+    #gif {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        z-index: 7;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
     #main-right-picture {
         width: 55vw;
     }
@@ -361,14 +399,17 @@ header.active {
     #main-right-picture {
         width: 70vw;
     }
+
     .main-left #main-text {
         font-size: 2.1rem;
     }
+
     .main .main-right {
         display: flex;
         flex-direction: column;
-        margin-top: -10rem; 
+        margin-top: -10rem;
     }
+
     .main2 {
         display: flex;
         flex-direction: column;
@@ -381,9 +422,23 @@ header.active {
 /* KEYFRAMES  */
 
 @keyframes blink {
-    0%  { color: black; }
-  49% { color: black; }
-  50% { color: transparent; }
-  99% { color: transparent; }
-  100%  { color: black; }
+    0% {
+        color: black;
+    }
+
+    49% {
+        color: black;
+    }
+
+    50% {
+        color: transparent;
+    }
+
+    99% {
+        color: transparent;
+    }
+
+    100% {
+        color: black;
+    }
 }
