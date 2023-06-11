@@ -21,13 +21,26 @@ burgerButton.addEventListener('click', () => {
 const menuLinks = document.querySelectorAll(".list-li");
 menuLinks.forEach(link => link.addEventListener('click', (e) => {
     const key = e.target.dataset.key;
+    let section;
+    if (key == 'projects') {
+        section =
+            document.querySelector(`.${key}`).getBoundingClientRect().top +
+            window.pageYOffset - 40;
+    }
+    if (key == 'main2') {
+        section =
+            document.querySelector(`.${key}`).getBoundingClientRect().top +
+            window.pageYOffset - 180;
+    }
+    if (key == 'contact') {
+        section =
+            document.querySelector(`.${key}`).getBoundingClientRect().top +
+            window.pageYOffset - 180;
+    }
 
-    const section =
-        document.querySelector(`.${key}`).getBoundingClientRect().top +
-        window.pageYOffset - 180;
 
     window.scrollTo({ top: section, behavior: 'smooth' });
-    
+
     headerListUL.classList.remove("active");
     burgerButton.classList.remove("active");
 }))
