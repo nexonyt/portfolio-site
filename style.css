@@ -7,7 +7,6 @@
     box-sizing: border-box;
 }
 
-
 :root {
     --shadow: rgba(0, 0, 0, 0.062) 0px 4px 5px;
 }
@@ -16,24 +15,18 @@ body {
     overflow-x: hidden !important;
 }
 
-/* ::-webkit-scrollbar {
-	width: 10px;
-	background: transparent;
-}
-::-webkit-scrollbar-thumb {
-	background: #000000;
-} */
-
 *::selection {
     color: white;
     background-color: rgb(48, 48, 48);
 }
 
+/* WORKSPACE LAYOUT */
+/* WORKSPACE LAYOUT */
+
 header {
     display: flex;
     justify-content: space-between;
     padding: 0.3rem;
-    /* height: 12vh; */
     height: 90px;
     position: sticky;
     top: 0;
@@ -132,7 +125,8 @@ header.active {
     z-index: 7;
 }
 
-/* SECTION 2 */
+/* ABOUT ME */
+/* ABOUT ME */
 
 .main2 {
     width: 100vw;
@@ -165,7 +159,9 @@ header.active {
 }
 
 
-/* SECTION 3 */
+/* PROJECTS */
+/* PROJECTS */
+
 #header-main3 {
     margin: 3rem 3rem 1rem 3rem;
     display: flex;
@@ -249,7 +245,8 @@ header.active {
 }
 
 
-/* STOPKA */
+/* FOOTER */
+/* FOOTER */
 
 #project-info {
     padding: 3rem;
@@ -326,7 +323,7 @@ header.active {
     width: 70px;
     height: 70px;
     margin: 0.1rem 0.5rem;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 .contact .icons img:hover {
@@ -627,3 +624,8 @@ header.active {
         color: black;
     }
 }
+
+
+/* ORIGINAL NEXONSTUDIO SITE PORTFOLIO CSS FILE */
+/* ORIGINAL NEXONSTUDIO SITE PORTFOLIO CSS FILE */
+/* ORIGINAL NEXONSTUDIO SITE PORTFOLIO CSS FILE */
