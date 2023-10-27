@@ -264,6 +264,11 @@ header.active {
     text-align: justify;
 }
 
+#description-project-2 {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
 #main-right-picture {
     width: 35rem;
     height: 35rem;
@@ -322,11 +327,11 @@ header.active {
     width: 70px;
     height: 70px;
     margin: 0.1rem 0.5rem;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.13s ease-in-out;
 }
 
 .contact .icons img:hover {
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
 #contact-infos {
@@ -539,6 +544,10 @@ header.active {
         list-style-type: none;
     }
 
+    #description-project-2 {
+        font-size: 1.1rem;
+    }
+
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
@@ -596,11 +605,14 @@ header.active {
     #description-project, #title-project{
         text-align: center;
     }
+    #description-project-2 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
 }
 
 
 /* KEYFRAMES  */
-
 @keyframes blink {
     0% {
         color: black;
@@ -622,7 +634,6 @@ header.active {
         color: black;
     }
 }
-
 
 /* ORIGINAL NEXONSTUDIO SITE PORTFOLIO CSS FILE */
 /* ORIGINAL NEXONSTUDIO SITE PORTFOLIO CSS FILE */
